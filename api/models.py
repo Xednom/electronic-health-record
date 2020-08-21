@@ -9,7 +9,7 @@ class BaseModel(models.Model):
         abstract = True
 
 
-class Company(BaseModel):
+class CompanyB00(BaseModel):
     name = models.CharField(max_length=500, null=True, blank=True)
     address_1 = models.TextField()
     address_2 = models.TextField()
@@ -24,7 +24,7 @@ class Company(BaseModel):
         return "%s" % (self.name)
 
 
-class Insurance(BaseModel):
+class InsuranceB00(BaseModel):
     address_1 = models.TextField()
     address_2 = models.TextField()
     city = models.CharField(max_length=500, null=True, blank=True)
@@ -39,8 +39,8 @@ class Insurance(BaseModel):
         return "%s %s" % (self.city, self.state)
 
 
-class InsuranceRepresentative(BaseModel):
-    insurance = models.ForeignKey(Insurance, null=True, blank=True, on_delete=models.PROTECT)
+class InsuranceB01(BaseModel):
+    insurance = models.ForeignKey(InsuranceB00, null=True, blank=True, on_delete=models.PROTECT)
     first_name = models.CharField(max_length=500, null=True, blank=True)
     last_name = models.CharField(max_length=500, null=True, blank=True)
     phone_1 = models.CharField(max_length=500, null=True, blank=True)
@@ -54,7 +54,7 @@ class InsuranceRepresentative(BaseModel):
         return "%s %s" % (self.first_name, self.last_name)
 
 
-class PatientContact(BaseModel):
+class PatientContactB00(BaseModel):
     GENDER = (
         ('Male', 'Male'),
         ('Female', 'Female')
@@ -85,8 +85,8 @@ class PatientContact(BaseModel):
         return "%s %s" % (self.last_name, self.contact_type)
 
 
-class PatientAddress(BaseModel):
-    patient_contact = models.ForeignKey(PatientContact, null=True, blank=True, on_delete=models.PROTECT)
+class PatientAddressB01(BaseModel):
+    patient_contact = models.ForeignKey(PatientContactB00, null=True, blank=True, on_delete=models.PROTECT)
     address_1 = models.TextField()
     address_2 = models.TextField()
     city = models.CharField(max_length=500, null=True, blank=True)
@@ -100,13 +100,13 @@ class PatientAddress(BaseModel):
         return "%s %s" % (self.patient_contact, self.address_1)        
 
 
-class PatientPhone(BaseModel):
+class PatientPhoneB02(BaseModel):
     PHONE_TYPE = (
         ('Home', 'Home'),
         ('Mobile', 'Mobile'),
         ('Work', 'Work')
     )
-    patient_contact = models.ForeignKey(PatientContact, null=True, blank=True, on_delete=models.PROTECT)
+    patient_contact = models.ForeignKey(PatientContactB00, null=True, blank=True, on_delete=models.PROTECT)
     phone = models.CharField(max_length=500, null=True, blank=True)
     phone_type = models.CharField(max_length=500, choices=PHONE_TYPE, null=True, blank=True)
     primary = models.BooleanField(null=True, blank=True, default=True)
