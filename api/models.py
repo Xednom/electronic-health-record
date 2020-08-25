@@ -216,3 +216,95 @@ class PatientHistoryB07(BaseModel):
 
     class Meta:
         ordering = ['-id']
+
+
+class PatientMedicationRouteB08R1(BaseModel):
+    route = models.CharField(max_length=500, null=True, blank=True)
+    abbreviation = models.CharField(max_length=500, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+
+class PatientMedicationFrequencyB08R2(BaseModel):
+    frequency = models.CharField(max_length=500, null=True, blank=True)
+    abbreviation = models.CharField(max_length=500, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+
+class PatientMedicationB08(BaseModel):
+    patient_contact_b00_rec = models.ForeignKey(PatientContactB00, null=True, blank=True, on_delete=models.PROTECT)
+    medication_type = models.CharField(max_length=500, null=True, blank=True)
+    medication = models.CharField(max_length=500, null=True, blank=True)
+    dose = models.CharField(max_length=500, null=True, blank=True)
+    patient_medication_route_b08r1_rec = models.ForeignKey(PatientMedicationRouteB08R1, null=True, blank=True, on_delete=models.PROTECT)
+    patient_medication_frequency_b08r2_rec = models.ForeignKey(PatientMedicationFrequencyB08R2, null=True, blank=True, on_delete=models.PROTECT)
+    prescribed_by = models.CharField(max_length=500, null=True, blank=True)
+    status = models.CharField(max_length=250, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+
+class OrganizationM00(BaseModel):
+    name = models.CharField(max_length=500, null=True, blank=True)
+    address_1 = models.TextField()
+    address_2 = models.TextField()
+    city = models.CharField(max_length=500, null=True, blank=True)
+    state = models.CharField(max_length=500, null=True, blank=True)
+    zip_code = models.CharField(max_length=50, null=True, blank=True)
+    phone = models.CharField(max_length=50, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+
+class OrganizationLocationM01(BaseModel):
+    organization_m00_rec = models.ForeignKey(OrganizationM00, null=True, blank=True, on_delete=models.PROTECT)
+    name = models.CharField(max_length=500, null=True, blank=True)
+    address_1 = models.TextField()
+    address_2 = models.TextField()
+    city = models.CharField(max_length=500, null=True, blank=True)
+    state = models.CharField(max_length=500, null=True, blank=True)
+    zip_code = models.CharField(max_length=50, null=True, blank=True)
+    phone = models.CharField(max_length=50, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+
+class OrganizationLocationRoomM02(BaseModel):
+    organization_location_m01_rec = models.ForeignKey(OrganizationLocationM01, null=True, blank=True, on_delete=models.PROTECT)
+    name = models.CharField(max_length=500, null=True, blank=True)
+    notes = models.TextField()
+
+    class Meta:
+        ordering = ['-id']
+
+
+class OrganizationStaffM03(BaseModel):
+    organization_m00_rec = models.ForeignKey(OrganizationM00, null=True, blank=True, on_delete=models.PROTECT)
+    organization_location_m01_rec = models.ForeignKey(OrganizationLocationM01, null=True, blank=True, on_delete=models.PROTECT)
+    first_name = models.CharField(max_length=500, null=True, blank=True)
+    middle_name = models.CharField(max_length=500, null=True, blank=True)
+    last_name = models.CharField(max_length=500, null=True, blank=True)
+    email_address = models.EmailField(null=True, blank=True)
+    role = models.CharField(max_length=500, null=True, blank=True)
+
+    class Meta:
+        ordering = ['-id']
+
+
+class AppointmentB00(BaseModel):
+    patient_contact_b00_rec = models.ForeignKey(PatientContactB00, null=True, blank=True, on_delete=models.PROTECT)
+    organization_location_m01_rec = models.ForeignKey(OrganizationLocationM01, null=True, blank=True, on_delete=models.PROTECT)
+    organization_location_room_m02_rec = models.ForeignKey(OrganizationLocationRoomM02, null=True, blank=True, on_delete=models.PROTECT)
+    date = models.DateField(null=True, blank=True)
+    time = models.TimeField(auto_now_add=True)
+    purpose = models.TextField()
+    scheduled_by = models.CharField(max_length=250, null=True, blank=True)
+    
+    class Meta:
+        ordering = ['-id']
