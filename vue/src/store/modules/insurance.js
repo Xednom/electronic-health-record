@@ -10,7 +10,8 @@ import {
   FETCH_END,
   SET_INSURANCES,
   SET_INSURANCE_REPS,
-  SET_AN_INSURANCE 
+  SET_AN_INSURANCE,
+  SET_AN_INSURANCE_REP
 } from "@/store/mutations.type";
 
 const state = {
@@ -78,7 +79,7 @@ const mutations = {
   [SET_AN_INSURANCE](state, pInsurance) {
     state.insurance = pInsurance;
   },
-  [SET_AN_INSURANCE_REPS](state, pInsuranceRep) {
+  [SET_AN_INSURANCE_REP](state, pInsuranceRep) {
     state.insuranceRep = pInsuranceRep;
   },
 };

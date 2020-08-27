@@ -9,6 +9,6 @@ export const SET_COMPANIES = "setCompanies";
 
 // related to insurance
 export const SET_AN_INSURANCE = "setAnInsurance";
-export const SET_AN_INSURANCE_REPS = "setAnInsuranceReps";
+export const SET_AN_INSURANCE_REP = "setAnInsuranceReps";
 export const SET_INSURANCES = "setInsurances";
 export const SET_INSURANCE_REPS = "setInsuranceReps";
