@@ -4,9 +4,8 @@ export const FETCH_END = "loadingOff";
 export const SET_ERROR = "setError";
 
 // related to company
-export const SET_AN_EXPENSE = "setAnExpense";
-export const SET_EXPENSES = "setExpenses";
-export const SET_TYPE_EXPENSES = "setTypeOfExpenses";
+export const SET_A_COMPANY = "setACompany";
+export const SET_COMPANIES = "setCompanies";
 
 // related to insurance
 export const SET_AN_INSURANCE = "setAnInsurance";
