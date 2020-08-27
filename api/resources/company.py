@@ -23,7 +23,7 @@ class CompanyB00DeleteSerializer(serializers.ModelSerializer):
 class CompanyB00ViewSet(viewsets.ModelViewSet):
     queryset = CompanyB00.objects.all()
     serializer_class = CompanyB00Serializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
     http_method_names = ['get', 'post', 'put', 'patch', 'head', 'options']
 
 
@@ -33,7 +33,7 @@ class CompanyB00DeleteView(generics.UpdateAPIView):
     serializer_class = CompanyB00DeleteSerializer
     queryset = CompanyB00.objects.all()
     lookup_field = 'id'
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
 
     def partial_update(self, request, *args, **kwargs):
         instance = self.get_object()
