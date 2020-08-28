@@ -23,7 +23,7 @@ class InsuranceB01DeleteSerializer(serializers.ModelSerializer):
 class InsuranceB01ViewSet(viewsets.ModelViewSet):
     queryset = InsuranceB01.objects.all()
     serializer_class = InsuranceB01Serializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
     http_method_names = ['get', 'post', 'put', 'patch', 'head', 'options']
 
 
@@ -33,7 +33,7 @@ class InsuranceB01DeleteView(generics.UpdateAPIView):
     serializer_class = InsuranceB01DeleteSerializer
     queryset = InsuranceB01.objects.all()
     lookup_field = 'id'
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
 
     def partial_update(self, request, *args, **kwargs):
         instance = self.get_object()

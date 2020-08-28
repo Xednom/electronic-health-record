@@ -36,6 +36,19 @@
             >
           </div>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Insurance Representative
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" :to="{ name: 'insurance_rep.list' }"
+              >List of Insurance Representative</router-link
+            >
+            <router-link class="dropdown-item" :to="{ name: 'insurance_rep.add' }"
+              >Add an Insurance Representative</router-link
+            >
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
