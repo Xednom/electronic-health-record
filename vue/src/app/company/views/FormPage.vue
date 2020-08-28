@@ -6,7 +6,7 @@
 import CompanyAdd from "@/app/company/components/CompanyAdd.vue";
 
 export default {
-    name: "FormPage",
+    name: "form-page",
     components: {
         CompanyAdd
     }

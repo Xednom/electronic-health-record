@@ -78,22 +78,16 @@ export default {
   props: {
     id: {
       type: Number,
-      default: 0
     }
   },
   methods: {
     onSubmit() {
       if (this.company) {
         
-        let endpoint = `/api/v1/company/${this.id}/`;
+        let endpoint = `/api/v1/company/${this.company.id}/`;
         let method = "PUT";
         apiService(endpoint, method, this.company)
-          .then(expense => {
-            
-            this.$router.push({
-              name: "company.edit",
-              params: { id: expense.id }
-            });
+          .then(() => {
             this.$store.dispatch(FETCH_A_COMPANY, this.$route.params.id);
           })
           .catch(err => {
