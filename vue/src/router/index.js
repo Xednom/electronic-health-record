@@ -2,33 +2,20 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
-import CompanyAdd from "@/app/company/components/CompanyAdd.vue";
-import CompanyDetail from "@/app/company/components/CompanyEditor.vue";
-import CompanyList from "@/app/company/views/ListPage.vue";
+import CompanyRoutes from "@/app/company/router";
+import InsuranceRoutes from "@/app/insurance/router";
 
 Vue.use(VueRouter);
 
-const routes = [
+const baseRoutes = [
   {
     path: "/",
     name: "Home",
     component: Home
   },
   {
-    path: "/company/add",
-    name: "company.add",
-    component: CompanyAdd
-  },
-  {
-    path: "/company/list",
-    name: "company.list",
-    component: CompanyList
-  },
-  {
-    path: "/company/:id/",
-    name: "company.edit",
-    component: CompanyDetail,
-    props: true
+    path: '*',
+    redirect: { name: 'Home' },
   },
   // {
   //   path: "/about",
@@ -40,6 +27,8 @@ const routes = [
   //     import(/* webpackChunkName: "about" */ "../views/About.vue")
   // }
 ];
+
+const routes = baseRoutes.concat(CompanyRoutes, InsuranceRoutes);
 
 const router = new VueRouter({
   mode: "history",
