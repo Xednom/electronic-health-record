@@ -12,6 +12,10 @@ django-environ = "*"
 mysqlclient = "*"
 django-cors-headers = "*"
 django-webpack-loader = "*"
+gunicorn = "*"
+dj-database-url = "*"
+psycopg2-binary = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"

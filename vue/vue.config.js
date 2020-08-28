@@ -36,10 +36,10 @@ module.exports = {
   },
 
   // uncomment before executing 'npm/yarn run build'
-  /*css: {
+  css: {
       extract: {
         filename: 'bundle.css',
         chunkFilename: 'bundle.css',
       },
-  }*/
+  }
 };
