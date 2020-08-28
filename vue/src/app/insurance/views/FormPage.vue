@@ -1,14 +1,14 @@
 <template>
-    <company-add />
+    <insurance-add />
 </template>
 
 <script>
-import CompanyAdd from "@/app/company/components/CompanyAdd.vue";
+import InsuranceAdd from "@/app/insurance/components/InsuranceAdd.vue";
 
 export default {
     name: "FormPage",
     components: {
-        CompanyAdd
+        InsuranceAdd
     }
 }
 </script>

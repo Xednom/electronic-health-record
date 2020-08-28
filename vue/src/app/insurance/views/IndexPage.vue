@@ -1,14 +1,14 @@
 <template>
-    <company-list />
+    <insurance-list />
 </template>
 
 <script>
-import CompanyList from "@/app/insurance/components/InsuranceTable.vue";
+import InsuranceList from "@/app/insurance/components/InsuranceTable.vue";
 
 export default {
     name: 'insurance-index',
     components: {
-        CompanyList
+        InsuranceList
     }
 }
 </script>
