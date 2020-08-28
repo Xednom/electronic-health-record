@@ -6,7 +6,7 @@
       v-for="item in items" 
       :key="item.id" 
       :selected="item === items">
-      {{ item.name }}
+      {{ item.id }}
     </option>
   </select>
 </template>

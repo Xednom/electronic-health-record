@@ -10,6 +10,15 @@
       <div class="card-body">
         <form @submit.prevent="onSubmit">
           <div class="form-row">
+            <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01"
+                      >Insurance</label
+                    >
+                  </div>
+                  <select-option v-model="newInsuranceRep.insurance"
+                    :items="insurances"></select-option>
+                </div>
             <div class="form-group col-md-6">
               <label>First name</label>
               <text-field v-model="newInsuranceRep.first_name"></text-field>
@@ -46,15 +55,18 @@
 import { apiService } from "@/common/api.service.js";
 
 import { mapGetters } from "vuex";
+import {FETCH_INSURANCES} from "@/store/actions.type";
 
 import NumberField from "@/ehr_components/ehr_forms/NumberField.vue";
 import TextField from "@/ehr_components/ehr_forms/TextField.vue";
+import SelectOption from "@/ehr_components/ehr_forms/SelectOption.vue";
 
 export default {
   name: "InsuranceRepAdd",
   components: {
     NumberField,
-    TextField
+    TextField,
+    SelectOption
   },
   data() {
     return {
@@ -63,6 +75,7 @@ export default {
       insuranceReps: {},
       currentItem: {},
       newInsuranceRep: {
+        insurance: null,
         address_1: "",
         address_2: "",
         city: "",
@@ -92,10 +105,10 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(["loading"])
+    ...mapGetters(["insurances","loading"])
   },
   mounted() {
-    
+    this.$store.dispatch(FETCH_INSURANCES);
   }
 };
 </script>
