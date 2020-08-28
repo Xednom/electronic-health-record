@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="mt-5">
-      <router-link :to="{ name: 'insurance.add' }">Add</router-link>
+      <router-link :to="{ name: 'insurance_rep.add' }">Add</router-link>
     </div>
     <div class="card mt-5">
-      <div class="card-header">Manage Insurances</div>
+      <div class="card-header">Manage Insurance Representatives</div>
       <div class="card-body">
         <table class="table table-striped">
           <thead>
