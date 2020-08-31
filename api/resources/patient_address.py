@@ -1,10 +1,11 @@
 from rest_framework import serializers, viewsets, generics
 from rest_framework.permissions import IsAuthenticated
 
-from api.models import PatientAddressB01
+from api.models import PatientAddressB01, PatientContactB00
 
 
 class PatientAddressB01Serializer(serializers.ModelSerializer):
+    patient_contact = serializers.SlugRelatedField(slug_field="last_name",queryset=PatientContactB00.objects.all(), allow_null=True)
 
     class Meta:
         model = PatientAddressB01
@@ -23,7 +24,7 @@ class PatientAddressB01DeleteSerializer(serializers.ModelSerializer):
 class PatientAddressB01ViewSet(viewsets.ModelViewSet):
     queryset = PatientAddressB01.objects.all()
     serializer_class = PatientAddressB01Serializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
     http_method_names = ['get', 'post', 'put', 'patch', 'head', 'options']
 
 
@@ -33,7 +34,7 @@ class PatientAddressB01DeleteView(generics.UpdateAPIView):
     serializer_class = PatientAddressB01DeleteSerializer
     queryset = PatientAddressB01.objects.all()
     lookup_field = 'id'
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
 
     def partial_update(self, request, *args, **kwargs):
         instance = self.get_object()

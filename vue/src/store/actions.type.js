@@ -11,3 +11,7 @@ export const FETCH_INSURANCE_REPS = "fetchInsuranceReps";
 // patient_contact
 export const FETCH_A_PATIENT_CONTACT = "fetchAPatientContact";
 export const FETCH_PATIENT_CONTACTS = "fetchPatientContacts";
+
+// patient_address
+export const FETCH_A_PATIENT_ADDRESS = "fetchAPatientAddress";
+export const FETCH_PATIENT_ADDRESSES = "fetchPatientAddresses";
