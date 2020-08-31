@@ -49,6 +49,19 @@
             >
           </div>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Patient Contact
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" :to="{ name: 'patient_contact.list' }"
+              >List of Patient Contact</router-link
+            >
+            <router-link class="dropdown-item" :to="{ name: 'patient_contact.add' }"
+              >Add a Patient Contact</router-link
+            >
+          </div>
+        </li>
       </ul>
     </div>
   </nav>

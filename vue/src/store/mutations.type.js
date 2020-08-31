@@ -12,3 +12,7 @@ export const SET_AN_INSURANCE = "setAnInsurance";
 export const SET_AN_INSURANCE_REP = "setAnInsuranceReps";
 export const SET_INSURANCES = "setInsurances";
 export const SET_INSURANCE_REPS = "setInsuranceReps";
+
+// related to patient_contact
+export const SET_A_PATIENT_CONTACT = "setAPatientContact";
+export const SET_PATIENT_CONTACTS = "setPatientContacts";
