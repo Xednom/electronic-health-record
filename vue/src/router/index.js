@@ -7,6 +7,7 @@ import InsuranceRoutes from "@/app/insurance/router";
 import InsuranceRepRoutes from "@/app/insurance_rep/router";
 import PatientContactRoutes from "@/app/patient_contact/router";
 import PatientAddressRoutes from "@/app/patient_address/router";
+import PatientPhoneRoutes from "@/app/patient_phone/router";
 
 Vue.use(VueRouter);
 
@@ -31,7 +32,8 @@ const baseRoutes = [
   // }
 ];
 
-const routes = baseRoutes.concat(CompanyRoutes, InsuranceRoutes, InsuranceRepRoutes, PatientContactRoutes, PatientAddressRoutes);
+const routes = baseRoutes.concat(CompanyRoutes, InsuranceRoutes, InsuranceRepRoutes, 
+  PatientContactRoutes, PatientAddressRoutes, PatientPhoneRoutes);
 
 const router = new VueRouter({
   mode: "history",

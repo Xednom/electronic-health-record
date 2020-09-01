@@ -20,3 +20,7 @@ export const SET_PATIENT_CONTACTS = "setPatientContacts";
 // related to patient_address
 export const SET_A_PATIENT_ADDRESS = "setAPatientAddress";
 export const SET_PATIENT_ADDRESSES = "setPatientAddresses";
+
+// related to patient_phone
+export const SET_A_PATIENT_PHONE = "setAPatientPhone";
+export const SET_PATIENT_PHONES = "setPatientPhones";

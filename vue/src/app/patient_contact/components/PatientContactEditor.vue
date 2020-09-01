@@ -94,7 +94,7 @@ import { FETCH_A_PATIENT_CONTACT } from "@/store/actions.type";
 import TextField from "@/ehr_components/ehr_forms/TextField.vue";
 
 export default {
-  name: "InsuranceRepEditor",
+  name: "PatientContactEditor",
   components: {
     TextField
     // NumberField

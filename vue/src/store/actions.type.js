@@ -15,3 +15,7 @@ export const FETCH_PATIENT_CONTACTS = "fetchPatientContacts";
 // patient_address
 export const FETCH_A_PATIENT_ADDRESS = "fetchAPatientAddress";
 export const FETCH_PATIENT_ADDRESSES = "fetchPatientAddresses";
+
+// patient_phone
+export const FETCH_A_PATIENT_PHONE = "fetchAPatientPhone";
+export const FETCH_PATIENT_PHONES = "fetchPatientPhones";
