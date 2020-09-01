@@ -19,7 +19,7 @@
         <div class="card-body">
           <form @submit.prevent="onSubmit">
             <div class="form-row">
-              <div class="form-group col-md-12">
+              <div class="form-group col-md-4">
                 <label for="validationCustom04">Patient Contact</label>
                 <select
                   class="custom-select"
@@ -34,11 +34,6 @@
                 <number-field v-model="patientPhone.phone"></number-field>
               </div>
               <div class="form-group col-md-4">
-                <input class="form-check-input" type="checkbox" value
-                v-model="patientPhone.primary"/>
-              <label class="form-check-label" for="defaultCheck1">Primary</label>
-              </div>
-              <div class="form-group col-md-4">
                 <label>Phone Type</label>
                 <select
                   class="custom-select"
@@ -49,6 +44,11 @@
                   <option>Mobile</option>
                   <option>Work</option>
                 </select>
+              </div>
+              <div class="form-group col-md-2">
+                <input class="form-check-input" type="checkbox" value
+                v-model="patientPhone.primary"/>
+              <label class="form-check-label" for="defaultCheck1">Primary</label>
               </div>
             </div>
             <button type="submit" class="btn btn-info">Update</button>
