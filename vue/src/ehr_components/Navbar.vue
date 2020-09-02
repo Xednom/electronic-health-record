@@ -12,7 +12,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Company
+            Company and Insurance
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <router-link class="dropdown-item" :to="{ name: 'company.list' }"
@@ -21,26 +21,14 @@
             <router-link class="dropdown-item" :to="{ name: 'company.add' }"
               >Add a company</router-link
             >
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Insurance
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <hr>
             <router-link class="dropdown-item" :to="{ name: 'insurance.list' }"
               >List of Insurance</router-link
             >
             <router-link class="dropdown-item" :to="{ name: 'insurance.add' }"
               >Add an Insurance</router-link
             >
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Insurance Representative
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <hr>
             <router-link class="dropdown-item" :to="{ name: 'insurance_rep.list' }"
               >List of Insurance Representative</router-link
             >
@@ -51,7 +39,7 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Patient Contact
+            Patient Basic Information
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <router-link class="dropdown-item" :to="{ name: 'patient_contact.list' }"
@@ -60,31 +48,32 @@
             <router-link class="dropdown-item" :to="{ name: 'patient_contact.add' }"
               >Add a Patient Contact</router-link
             >
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Patient Address
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <hr>
             <router-link class="dropdown-item" :to="{ name: 'patient_address.list' }"
               >List of Patient Address</router-link
             >
             <router-link class="dropdown-item" :to="{ name: 'patient_address.add' }"
               >Add a Patient Address</router-link
             >
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Patient Phone
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <hr>
             <router-link class="dropdown-item" :to="{ name: 'patient_phone.list' }"
               >List of Patient Phone</router-link
             >
             <router-link class="dropdown-item" :to="{ name: 'patient_phone.add' }"
               >Add a Patient Phone</router-link
+            >
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Patient Extended Information
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <router-link class="dropdown-item" :to="{ name: 'patient_sibling.list' }"
+              >List of Patient Sibling</router-link
+            >
+            <router-link class="dropdown-item" :to="{ name: 'patient_sibling.add' }"
+              >Add a Patient Sibling</router-link
             >
           </div>
         </li>
