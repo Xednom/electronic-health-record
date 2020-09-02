@@ -53,7 +53,7 @@
               </div>
             </div>
             <button type="submit" class="btn btn-info">Update</button>
-            <button type="submit" class="btn btn-danger ml-2" @click="deletePatientPhone">Delete</button>
+            <button type="submit" class="btn btn-danger ml-2" @click="deletePatientSibling">Delete</button>
           </form>
         </div>
       </div>
@@ -103,7 +103,7 @@ export default {
           });
       }
     },
-    deletePatientPhone() {
+    deletePatientSibling() {
       let endpoint = `/api/v1/patient-sibling-b03-delete/${this.patientSibling.id}/`;
       let method = "PUT";
       this.patientSibling.active_status = false;
