@@ -6,6 +6,7 @@ import { insurances } from "../store/modules/insurance.js";
 import { patientContacts } from "../store/modules/patient_contact.js";
 import { patientAddresses } from "../store/modules/patient_address.js";
 import { patientPhones } from "../store/modules/patient_phone.js";
+import { patientSiblings } from "../store/modules/patient_sibling.js";
 
 
 Vue.use(Vuex);
@@ -16,6 +17,7 @@ export default new Vuex.Store({
     insurances,
     patientContacts,
     patientAddresses,
-    patientPhones
+    patientPhones,
+    patientSiblings
   }
 });

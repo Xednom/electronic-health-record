@@ -64,6 +64,18 @@
         </div>
       </div>
     </div>
+    <div class="card-deck">
+      <div class="card border-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">Patient Sibling App</div>
+        <div class="card-body">
+          <p class="card-link">
+            <router-link :to="{ name:'patient_sibling.list' }">List of Patient Sibling</router-link>
+            <br />
+            <router-link :to="{ name: 'patient_sibling.add' }">Add a Patient Sibling</router-link>
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
