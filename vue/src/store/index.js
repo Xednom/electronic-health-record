@@ -7,6 +7,7 @@ import { patientContacts } from "../store/modules/patient_contact.js";
 import { patientAddresses } from "../store/modules/patient_address.js";
 import { patientPhones } from "../store/modules/patient_phone.js";
 import { patientSiblings } from "../store/modules/patient_sibling.js";
+import { patientGeneralQuestionCategories } from "../store/modules/patient_general_question.js";
 
 
 Vue.use(Vuex);
@@ -18,6 +19,7 @@ export default new Vuex.Store({
     patientContacts,
     patientAddresses,
     patientPhones,
-    patientSiblings
+    patientSiblings,
+    patientGeneralQuestionCategories
   }
 });

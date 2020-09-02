@@ -23,3 +23,7 @@ export const FETCH_PATIENT_PHONES = "fetchPatientPhones";
 // patient_sibling
 export const FETCH_A_PATIENT_SIBLING = "fetchAPatientSibling";
 export const FETCH_PATIENT_SIBLINGS = "fetchPatientSiblings";
+
+// patient_general_question
+export const FETCH_A_PATIENT_GENERAL_QUESTION_CATEGORY = "fetchAPatientGeneralQuestionCategory";
+export const FETCH_PATIENT_GENERAL_QUESTION_CATEGORIES = "fetchPatientGeneralQuestionCategories";

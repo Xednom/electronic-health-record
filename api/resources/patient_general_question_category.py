@@ -23,7 +23,7 @@ class PatientGeneralQuestionsCategoryB04RDeleteSerializer(serializers.ModelSeria
 class PatientGeneralQuestionsCategoryB04RViewSet(viewsets.ModelViewSet):
     queryset = PatientGeneralQuestionsCategoryB04R.objects.all()
     serializer_class = PatientGeneralQuestionsCategoryB04RSerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
     http_method_names = ['get', 'post', 'put', 'patch', 'head', 'options']
 
 
@@ -33,7 +33,7 @@ class PatientGeneralQuestionsCategoryB04RDeleteView(generics.UpdateAPIView):
     serializer_class = PatientGeneralQuestionsCategoryB04RDeleteSerializer
     queryset = PatientGeneralQuestionsCategoryB04R.objects.all()
     lookup_field = 'id'
-    permission_classes = [IsAuthenticated]
+    permission_classes = []
 
     def partial_update(self, request, *args, **kwargs):
         instance = self.get_object()

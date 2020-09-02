@@ -75,6 +75,16 @@
           </p>
         </div>
       </div>
+      <div class="card border-info mb-3" style="max-width: 18rem;">
+        <div class="card-header">Patient General Question Category App</div>
+        <div class="card-body">
+          <p class="card-link">
+            <router-link :to="{ name:'patient_general_question_category.list' }">List of Patient General Question Category</router-link>
+            <br />
+            <router-link :to="{ name: 'patient_general_question_category.add' }">Add a Patient General Question Category</router-link>
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </template>

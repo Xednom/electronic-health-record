@@ -75,6 +75,13 @@
             <router-link class="dropdown-item" :to="{ name: 'patient_sibling.add' }"
               >Add a Patient Sibling</router-link
             >
+            <hr>
+            <router-link class="dropdown-item" :to="{ name: 'patient_general_question_category.list' }"
+              >List of Patient General Question Category</router-link
+            >
+            <router-link class="dropdown-item" :to="{ name: 'patient_general_question_category.add' }"
+              >Add a Patient General Question Category</router-link
+            >
           </div>
         </li>
       </ul>

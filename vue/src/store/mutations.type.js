@@ -28,3 +28,7 @@ export const SET_PATIENT_PHONES = "setPatientPhones";
 // related to patient_phone
 export const SET_A_PATIENT_SIBLING = "setAPatientSibling";
 export const SET_PATIENT_SIBLINGS = "setPatientSiblings";
+
+// related to patient_general_question_category
+export const SET_A_PATIENT_GENERAL_QUESTION_CATEGORY = "setAPatientGeneralQuestionCategory";
+export const SET_PATIENT_GENERAL_QUESTION_CATEGORIES = "setPatientGeneralQuestionCategories";
