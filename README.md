@@ -24,5 +24,5 @@ Migrate DB
 start local server
 ``` python manage.py runserver ```
 
-#Access to the API Endpoint
+# Access to the API Endpoint
 To access the API root go to **<localhost:8000>/api/v1/** or **<127.0.0.1:8000>/api/v1/**
