@@ -32,3 +32,7 @@ export const SET_PATIENT_SIBLINGS = "setPatientSiblings";
 // related to patient_general_question_category
 export const SET_A_PATIENT_GENERAL_QUESTION_CATEGORY = "setAPatientGeneralQuestionCategory";
 export const SET_PATIENT_GENERAL_QUESTION_CATEGORIES = "setPatientGeneralQuestionCategories";
+export const SET_A_PATIENT_GENERAL_QUESTION_B04S = "setAPatientGeneralQuestionB04s";
+export const SET_PATIENT_GENERAL_QUESTIONS_B04S = "setPatientGeneralQuestionsB04s";
+export const SET_A_PATIENT_GENERAL_QUESTION_B04 = "setAPatientGeneralQuestionB04";
+export const SET_PATIENT_GENERAL_QUESTIONS_B04 = "setPatientGeneralQuestionsB04";

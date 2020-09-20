@@ -27,3 +27,7 @@ export const FETCH_PATIENT_SIBLINGS = "fetchPatientSiblings";
 // patient_general_question
 export const FETCH_A_PATIENT_GENERAL_QUESTION_CATEGORY = "fetchAPatientGeneralQuestionCategory";
 export const FETCH_PATIENT_GENERAL_QUESTION_CATEGORIES = "fetchPatientGeneralQuestionCategories";
+export const FETCH_A_PATIENT_GENERAL_QUESTION_B04S = "fetchAPatientGeneralQuestionB04S";
+export const FETCH_PATIENT_GENERAL_QUESTIONS_B04S = "fetchPatientGeneralQuestionsB04S";
+export const FETCH_A_PATIENT_GENERAL_QUESTION_B04 = "fetchAPatientGeneralQuestionB04";
+export const FETCH_PATIENT_GENERAL_QUESTIONS_B04 = "fetchPatientGeneralQuestionsB04";
